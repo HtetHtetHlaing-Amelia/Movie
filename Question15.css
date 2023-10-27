@@ -1,0 +1,398 @@
+:root {
+    --primaryBgColor1: #151515;
+    --primaryBgColor2: #2B2B2B;
+    --primaryColor1: white;
+    --primaryColor2: #C10F0F;
+    --primaryColor3: #FFB900;
+    --fontfamily1: 'Plus Jakarta Sans', sans-serif;
+    --fontfamily2: 'Racing Sans One', cursive;
+    --fontfamily3: 'PT Sans Narrow', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+/*header*/
+header {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--primaryBgColor1);
+    color: var(--primaryColor1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--fontfamily3);
+}
+
+/*For All Caption*/
+.caption {
+    font-size: 25px;
+    font-family: var(--fontfamily2);
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.caption1::after,
+.caption3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    width: 900px;
+    height: 2px;
+    background-color: var(--primaryColor2);
+}
+.caption2::before{
+   
+    content: "";
+    position: absolute;
+    top:60%;
+    left: -800px;
+    width: 750px;
+    height: 2px;
+    background-color: red;
+   
+      
+}
+.caption2 {
+    margin-left: 70%;
+    margin-right: 2px;
+    position: relative;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+ul>li {
+    margin: 15px;
+    list-style-type: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.desktop>li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: var(--primaryColor2);
+    transition: all 1s linear;
+}
+
+li:hover::after {
+    width: 46px;
+}
+
+li:first-child:hover::after {
+    width: 95px;
+}
+
+li:nth-child(5):hover::after {
+    width: 75px;
+}
+
+li:last-child:hover::after {
+    width: 0px;
+}
+
+
+li>button,
+.watch>button {
+    width: 80px;
+    height: 30px;
+    border: 1px solid var(--primaryBgColor1);
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--primaryColor2);
+    color: white;
+}
+
+a ion-icon[name="grid"] {
+    display: none;
+}
+
+a ion-icon {
+    color: white;
+    font-size: 27px;
+
+}
+
+.mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primaryBgColor1);
+    color: var(--primaryColor1);
+}
+
+.mobile>li:hover {
+    color: green;
+
+}
+
+#switch {
+    display: none;
+}
+
+/*body*/
+.body {
+    background-color: var(--primaryBgColor2);
+}
+
+/*Poster*/
+.poster {
+    position: relative;
+}
+
+.poster figcaption {
+
+    font-size: 18px;
+    font-family: var(--fontfamily1);
+    position: absolute;
+    top: 62%;
+    bottom: 48%;
+    left: 9%;
+    color: white;
+    line-height: 28px;
+}
+
+figcaption>p:nth-child(2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.watch>button {
+    position: absolute;
+    border: 1px solid var(--primaryColor2);
+    border-radius: 7px;
+    width: 150px;
+    height: 33px;
+    text-align: center;
+    font-size: 18px;
+    top: 80%;
+    right: 10%;
+}
+
+/*2nd part*/
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movies1 {
+    background-color: var(--primaryBgColor1);
+    width: 200px;
+    margin: 20px;
+    color: var(--primaryColor1);
+    align-items: center;
+    margin: 10px;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.star {
+    float: left;
+}
+
+.premium {
+    float: right;
+}
+
+.watchlistbtn {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    color: var(--primaryColor3);
+    background-color: var(--primaryBgColor2);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/*For 3rd part*/
+.image {
+    position: relative;
+    background-color: var(--primaryBgColor2);
+}
+
+.image figcaption {
+    font-size: 20px;
+    font-family: var(--fontfamily2);
+    position: absolute;
+    top: 32%;
+    bottom: 48%;
+    left: 50%;
+    color: white;
+    line-height: 28px;
+}
+
+figcaption>span {
+    margin-top: px;
+    margin-left: 25px;
+    position: absolute;
+    color: var(--primaryColor3);
+}
+
+/*For 4th part*/
+.series {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.series1 {
+    background-color: var(--primaryBgColor1);
+    width: 200px;
+    margin: 20px;
+    color: var(--primaryColor1);
+    align-items: center;
+    margin: 10px;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.star {
+    float: left;
+}
+
+.premium {
+    float: right;
+}
+
+.name {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.sDesc {
+    margin-top: 5px;
+}
+
+.watchlistbtn {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    color: var(--primaryColor3);
+    background-color: var(--primaryBgColor2);
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.seeMore {
+
+    background-color: var(--primaryBgColor2);
+    color: var(--primaryColor3);
+    margin-left: 85%;
+    margin-right: 10px;
+    padding-bottom: 8px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--primaryBgColor1);
+    color: var(--primaryColor1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primaryColor1);
+
+}
+
+.menu>ul {
+    flex-direction: column;
+}
+
+.text,
+.icon {
+    width: 300px;
+    margin-top: 3px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+div.text>p {
+
+    margin-top: 13px;
+    font-family: var(--fontfamily3);
+    font-style: italic;
+    color: var(--primaryColor1);
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.icon>img,
+.icon>p {
+    font-family: var(--fontfamily3);
+    margin: 10px;
+
+}
+
+ul.bottomli>li {
+    margin: 10px;
+    list-style-type: none;
+    font-size: 18px;
+    position: relative;
+}
+
+ul.bottomli>li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 11%;
+    width: 0px;
+    height: 2px;
+    background-color: var(--primaryColor2);
+    transition: all 1s linear;
+}
+
+ul.bottomli>li:hover::after {
+    width: 57px;
+}
+
+@media screen and (max-width :720px) {
+    header {
+        padding-top: 10;
+        padding-bottom: 10px;
+    }
+
+    a ion-icon[name="grid"] {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    #switch:checked+ul {
+        display: flex;
+    }
+
+
+}
